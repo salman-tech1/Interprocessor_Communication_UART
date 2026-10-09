@@ -23,7 +23,9 @@ esp32/managed_components/
 Thumbs.db
 
 
-.$Optimal_Load_V1.drawio.bkp
-.$UART_Packet_Parser.drawio.bkp
-.$UART_Packet_Parser.drawio.dtmp
-.vscode
+# IDE
+.vscode/
+
+# Draw.io temp/backup files
+.$*.drawio.bkp
+.$*.drawio.dtmp
