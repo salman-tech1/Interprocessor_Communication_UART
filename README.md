@@ -1,13 +1,11 @@
-Inter-Processor Communication over UART
-A reliable UART-based inter processor communication protocol for communication between STM32 and ESP32 microcontrollers, 
-featuring automatic retry, duplicate detection, and CRC-16 error checking.
+## Inter-Processor Communication over UART
+#### A reliable UART-based inter processor communication protocol for communication between STM32 and ESP32 microcontrollers, featuring automatic retry, duplicate detection, and CRC-16 error checking.
 
 Protocol Frame Format
-| SYNC0 | SYNC1 | LENGTH | CMD | SEQ | PAYLOAD | CRC_LSB | CRC_MSB |
-| 0x55 | 0xAA | 1 byte | 1b | 1b | N bytes | 1 byte | 1 byte |
 
-text
+```| SYNC0 | SYNC1 | LENGTH | CMD | SEQ | PAYLOAD | CRC_LSB | CRC_MSB |```
 
+```| 0x55 | 0xAA | 1 byte | 1b | 1b | N bytes | 1 byte | 1 byte |```
 
 - **SYNC**: Fixed synchronization bytes (0x55, 0xAA)
 - **LENGTH**: Payload length (0–200 bytes)
@@ -46,18 +44,28 @@ text
 - Frame building with sync bytes and length field
 
 ## Architecture
+<img width="6008" height="2020" alt="image" src="https://github.com/user-attachments/assets/72097b31-7702-486f-8fe0-5aec86dd6460" />
+
+## Real Time Demonstration 
+<img width="4732" height="2404" alt="image" src="https://github.com/user-attachments/assets/aa499569-b6c4-458c-a4cb-a499ec654fb4" />
+
+
+<img width="2104" height="3856" alt="image" src="https://github.com/user-attachments/assets/d25a01a6-5f10-4e94-bc4f-496201c9356c" />
+
 
 
 ## Project Structure
-Interprocessor_Communication_UART/
-├── stm32/ # STM32CubeIDE project
-├── esp32/ # ESP-IDF project
-├── .gitignore
-└── README.md
+
+| Directory                   | Description                       |
+|-----------------------------|-----------------------------------|
+|stm32/                       | Source files for the stm32 side   |
+|esp32/                       |source files for the esp32 side    |
 
 ## Wiring
 STM32 TX ───► ESP32 RX
+
 STM32 RX ◄─── ESP32 TX
+
 STM32 GND ──── ESP32 GND
 
 ## Configuration
