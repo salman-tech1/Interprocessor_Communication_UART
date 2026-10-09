@@ -1,0 +1,14 @@
+#ifndef TASKS_COMMON_H 
+#define TASKS_COMMON_H 
+
+
+#define LINK_RX_QUEUE_DEPTH     16U
+#define LINK_RX_TASK_STACK      4096U
+#define LINK_APP_TASK_STACK     4096U
+#define LINK_RX_TASK_PRIORITY   5U
+#define LINK_APP_TASK_PRIORITY  4U
+
+
+
+
+#endif 

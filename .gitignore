@@ -1,0 +1,23 @@
+# ==================== STM32 (CubeIDE) ====================
+stm32/Debug/
+stm32/Release/
+stm32/.settings/
+stm32/**/*.o
+stm32"/**/*.d
+stm32/**/*.su
+stm32/**/*.i
+stm32/**/*.s
+stm32/**/*.map
+stm32/**/*.lst
+
+# ==================== ESP32 (ESP-IDF) ====================
+esp32/build/
+esp32/sdkconfig.old
+esp32/managed_components/
+
+# ==================== General ====================
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
